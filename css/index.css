@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: teste;
+  src: url(font/GAMERIA.ttf);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url(gif/215751.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+  transition: background-color 1s;
+}
+
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.5em;
+}
+
+.typewriter h1 {
+  text-shadow: rgba(0, 0, 0, 0.432) 0.1em 0.1em 0.2em;
+  font-family: montserrat;
+  font-size: 70px;
+  font-weight: 300;
+  display: inline-block;
+  overflow: hidden;
+  border-right: 0.15em solid rgb(255, 145, 0);
+  animation: caret 1s steps(1) infinite;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+@keyframes caret {
+  from {
+    border-right-color: rgb(255, 145, 0);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+.fixed-text {
+  line-height: 1;
+  font-size: 12em;
+  font-family: teste;
+  color: rgb(255, 145, 0);
+  text-shadow: rgba(0, 0, 0, 0.432) 0.1em 0.1em 0.2em;
+}
+
+footer {
+  background-color: transparent;
+  backdrop-filter: blur(14px);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0.5em;
+  margin-left: 0.2em;
+  margin-right: 0.2em;
+  font-family: montserrat;
+  font-weight: 500;
+}
+
+footer,
+p {
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  /* styles for screens with a maximum width of 768px */
+  body {
+    font-size: 16px;
+  }
+  .typewriter h1 {
+    font-size: 40px;
+  }
+  .fixed-text {
+    font-size: 8em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* styles for screens with a maximum width of 480px */
+  body {
+    font-size: 14px;
+  }
+  .typewriter h1 {
+    font-size: 30px;
+  }
+  .fixed-text {
+    font-size: 6em;
+  }
+}
